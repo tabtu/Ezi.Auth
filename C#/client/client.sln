@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1700.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ezi.Client.Example", "Ezi.Client.Example\Ezi.Client.Example.csproj", "{49D8FCC4-23A9-43A1-8B36-97A94515C8EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ezi.Client.Token", "Ezi.Client.Token\Ezi.Client.Token.csproj", "{60719BA1-D297-44B6-89E5-E7046594BF59}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49D8FCC4-23A9-43A1-8B36-97A94515C8EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49D8FCC4-23A9-43A1-8B36-97A94515C8EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49D8FCC4-23A9-43A1-8B36-97A94515C8EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49D8FCC4-23A9-43A1-8B36-97A94515C8EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60719BA1-D297-44B6-89E5-E7046594BF59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60719BA1-D297-44B6-89E5-E7046594BF59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60719BA1-D297-44B6-89E5-E7046594BF59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60719BA1-D297-44B6-89E5-E7046594BF59}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0AD702BF-D416-436F-92BD-CB51E87C1A3A}
+	EndGlobalSection
+EndGlobal
