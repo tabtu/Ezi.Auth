@@ -1,13 +1,9 @@
-# YIJU api TOKEN client package
+# Ezi API, client authentication package
 
-# Example:
+<a href="https://github.com/tabtu/Ezi.Auth/tree/master/C%23">C# Example</a>
 
-# C#
+Javascript
 
-- <a href="https://github.com/tabtu/token2/blob/master/README.md">README</a>
+Swift
 
-# Javascript
-
-# Swift
-
-# Java
+Java
