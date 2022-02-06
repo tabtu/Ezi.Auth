@@ -7,20 +7,13 @@ namespace Ezi.Client.Token
 	public class FileTool
 	{
         private static string TAG = "#;#";
-        private static double expireTime = 7000;  // seconds
-        private static string TokenFile = "ezAccessToken.txt";
+        //private static double expireTime = 7000;  // seconds
+        private static string TokenFile = "ezToken.txt";
 
-        public class AccessToken
+        public static void UpdateToken(string appid, string token, DateTime expiry)
         {
-            public string? ezAppId;
-            public string? accessToken;
-            public DateTime expiry;
-        }
-
-        public static void InsertToken(string appid, string? token)
-        {
-            token = token == null ? "" : token;
-            DateTime expiry = DateTime.Now.AddSeconds(expireTime);
+            //token = token == null ? "" : token;
+            //DateTime expiry = DateTime.Now.AddSeconds(expireTime);
             string content = appid + TAG + token + TAG + expiry.ToString();
             SaveFile(TokenFile, content);
             return;

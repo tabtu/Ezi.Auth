@@ -9,10 +9,13 @@ using Newtonsoft.Json;
 namespace Ezi.Client.Token
 {
 
-    public class Token
+    public class Generator
     {
         private static string AppId = "";
         private static string AppSecret = "";
+        private static string AppSite = "";
+
+        //private static int expiry_mins = 15;
         //public static string ECHO = "PRODUCTION";
 
         private static readonly HttpClient client = new HttpClient();
@@ -58,20 +61,20 @@ namespace Ezi.Client.Token
         }
 
 
-        public string? GetToken()
+        public string GetToken()
         {
-            FileTool.AccessToken actk = FileTool.GetLastAccessToken();
+            AccessToken actk = FileTool.GetLastAccessToken();
             if (actk != null && DateTime.Now < actk.expiry)
             {
                 return actk.accessToken;
             }
             else
             {
-                AccessTokenPkg atp = requestAccessToken(AppId, AppSecret, "188888").GetAwaiter().GetResult();
+                AccessToken atp = requestAccessToken(AppId, AppSecret, AppSite).GetAwaiter().GetResult();
                 if (atp != null)
                 {
-                    FileTool.InsertToken(AppId, atp.access_token);
-                    return atp.access_token;
+                    FileTool.UpdateToken(AppId, atp.accessToken, atp.expiry);
+                    return atp.accessToken;
                 }
                 else
                 {
@@ -80,19 +83,20 @@ namespace Ezi.Client.Token
             }
         }
 
-        public async Task<AccessTokenPkg> requestAccessToken(string appid, string secret, string siteid)
+        public async Task<AccessToken> requestAccessToken(string appid, string secret, string siteid)
         {
             try
             {
                 string postData = "\"{'usr':'" + appid + "','pwd':'" + secret + "','hd':'" + siteid + "'}\"";
                 var data = new StringContent(postData, Encoding.UTF8, "application/json");
                 var response = await client.PostAsync("https://api.yjezimoc.com/token/login", data);
-                AccessTokenPkg tokenPkg = new AccessTokenPkg();
-                tokenPkg.access_token = response.Content.ReadAsStringAsync().Result;
-                tokenPkg.expires_in = DateTime.Now.ToString();
-                return tokenPkg;
+                AccessToken token = new AccessToken();
+                token.ezAppId = appid;
+                token.accessToken = response.Content.ReadAsStringAsync().Result;
+                token.expiry = DateTime.Now;
+                return token;
             }
-            catch { return new AccessTokenPkg(); }
+            catch { return new AccessToken(); }
         }
     }
 }
