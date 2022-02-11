@@ -2,21 +2,35 @@
 
 namespace Ezi.Client.Token
 {
-    public class AccessTokenPkg
+    public class AccessToken
     {
-        public string? access_token;
-        public string? expires_in;
+        public string ezAppId;
+        public string accessToken;
+        public DateTime expiry;
+
+        public AccessToken()
+        {
+            ezAppId = "";
+            accessToken = "";
+            expiry = DateTime.Now;
+        }
     }
 
     [DataContract]
     public class EzConfig
     {
         [DataMember]
-        public string? appid;
+        public string appid;
         [DataMember]
-        public string? timestamp;
+        public string timestamp;
         [DataMember]
-        public string? signature;
+        public string signature;
+
+        public EzConfig()
+        {
+            appid = "";
+            timestamp = "";
+            signature = "";
+        }
     }
 }
-
