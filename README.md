@@ -2,8 +2,8 @@
 
 <a href="https://github.com/tabtu/Ezi.Auth/tree/master/C%23">C# Example</a>
 
-<a href="ttps://github.com/tabtu/Ezi.Auth/tree/master/Swift">Swift</a>
+<a href="https://github.com/tabtu/Ezi.Auth/tree/master/Swift">Swift</a>
 
-<a href="ttps://github.com/tabtu/Ezi.Auth/tree/master/Java">Java</a>
+<a href="https://github.com/tabtu/Ezi.Auth/tree/master/Java">Java</a>
 
-<a href="ttps://github.com/tabtu/Ezi.Auth/tree/master/WebJs">Web Client</a>
+<a href="https://github.com/tabtu/Ezi.Auth/tree/master/WebJs">Web Client</a>
