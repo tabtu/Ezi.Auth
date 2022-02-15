@@ -1,12 +1,4 @@
-/**
- * 对公众平台发送给公众账号的消息加解密示例代码.
- * 
- * @copyright Copyright (c) 1998-2014 Tencent Inc.
- */
-
-// ------------------------------------------------------------------------
-
-package com.qq.weixin.mp.aes;
+package com.ezi.client.func;
 
 import java.security.MessageDigest;
 import java.util.Arrays;
@@ -14,7 +6,6 @@ import java.util.Arrays;
 /**
  * SHA1 class
  *
- * 计算公众平台的消息签名接口.
  */
 class SHA1 {
 

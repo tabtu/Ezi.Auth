@@ -1,4 +1,4 @@
-package com.qq.weixin.mp.aes;
+package com.ezi.client.func;
 
 import java.util.ArrayList;
 
