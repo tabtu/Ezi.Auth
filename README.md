@@ -7,5 +7,3 @@
 <a href="https://github.com/tabtu/Ezi.Auth/tree/master/Java">Java</a>
 
 <a href="https://github.com/tabtu/Ezi.Auth/tree/master/Python">Python</a>
-
-<a href="https://github.com/tabtu/Ezi.Auth/tree/master/php">php</a>
