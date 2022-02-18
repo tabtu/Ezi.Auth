@@ -35,5 +35,5 @@ class Req:
 
 
     if __name__ == "__main__":
-        tk = getAccessToken('i@tabtu.cn', 'b5288f12c9a5881aab361704cd1873df', '188888')
+        tk = getAccessToken('appId', 'secret', 'siteId')
         print(tk)
