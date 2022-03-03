@@ -2,3 +2,4 @@ add bind parameter into token applying.
 
 default binding with Empty String
 
+merge serive to siteforyou
