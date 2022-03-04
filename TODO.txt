@@ -3,3 +3,9 @@ add bind parameter into token applying.
 default binding with Empty String
 
 merge serive to siteforyou
+
+update Wechat Web SDK authorization to Ezi.
+
+migrate ViewEngine to .30 server.
+
+ready on publishing Token2.
