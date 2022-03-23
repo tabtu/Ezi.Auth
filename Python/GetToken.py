@@ -23,13 +23,13 @@ class Req:
 
     def getAnonymousToken():
         url = 'https://api.yjezimoc.com/token/login'
-        obj = '\"{\'usr\':\'anonymous\',\'pwd\':\'188888\',\'hd\':\'188888\'}"'
+        obj = '\"{\'usr\':\'anonymous\',\'pwd\':\'100001\',\'st\':\'100001\',\'hd\':\'192.168.1.1\'}"'
         x = postReq(url, obj)
         return x
 
-    def getAccessToken(appId, secret, siteId):
+    def getAccessToken(appId, secret, siteId, binding):
         url = 'https://api.yjezimoc.com/token/login'
-        obj = '\"{\'usr\':\'' + appId + '\',\'pwd\':\'' + secret + '\',\'hd\':\'' + siteId + '\'}"'
+        obj = '\"{\'usr\':\'' + appId + '\',\'pwd\':\'' + secret + '\',\'st\':\'' + siteId + '\',\'st\':\'' + binding + '\'}"'
         x = postReq(url, obj)
             return x
 

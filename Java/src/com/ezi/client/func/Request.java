@@ -9,24 +9,23 @@ public class Request {
     private const String USR = "usr";
     private const String PWD = "pwd";
     private const String HIDE = "hd";
-    private const String SITE = "100008";
+    private const String SITE = "st";
     private const String _LOGIN = "https://api.yjezimoc.com/login";
 
-
-
-
+    
     // Create json string from JsonObject
     public String CreateJsonParam(JsonObject param) {
         return "\"" + param.toString().replace('\"', '\'') + "\"";
     }
 
     // Request a token from server
-    public String SyncToken(String appId, String secret) {
+    public String SyncToken(String appId, String secret, String siteId, String binding) {
         try {
             JsonObject json = new JsonObject();
             json.addProperty(USR, appId);
             json.addProperty(PWD, secret);
-            json.addProperty(HIDE, SITE);
+            json.addProperty(SITE, siteId);
+            json.addProperty(HIDE, binding);
             String response = _SynHttpPost(_Login, CreateJsonParam(json));
             return response;
         } catch(Exception e) {
