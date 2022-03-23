@@ -15,6 +15,8 @@ namespace Ezi.Client.Token
         private static string AppSecret = "";
         private static string AppSite = "";
 
+        private static string AppBinding = "";
+
         //private static int expiry_mins = 15;
         //public static string ECHO = "PRODUCTION";
 
@@ -70,7 +72,7 @@ namespace Ezi.Client.Token
             }
             else
             {
-                AccessToken atp = requestAccessToken(AppId, AppSecret, AppSite).GetAwaiter().GetResult();
+                AccessToken atp = requestAccessToken(AppId, AppSecret, AppSite, AppBinding).GetAwaiter().GetResult();
                 if (atp != null)
                 {
                     FileTool.UpdateToken(AppId, atp.accessToken, atp.expiry);
@@ -83,11 +85,11 @@ namespace Ezi.Client.Token
             }
         }
 
-        public async Task<AccessToken> requestAccessToken(string appid, string secret, string siteid)
+        public async Task<AccessToken> requestAccessToken(string appid, string secret, string siteid, string binding)
         {
             try
             {
-                string postData = "\"{'usr':'" + appid + "','pwd':'" + secret + "','hd':'" + siteid + "'}\"";
+                string postData = "\"{'usr':'" + appid + "','pwd':'" + secret + "','st':'" + siteid + "','hd':'" + binding + "'}\"";
                 var data = new StringContent(postData, Encoding.UTF8, "application/json");
                 var response = await client.PostAsync("https://api.yjezimoc.com/token/login", data);
                 AccessToken token = new AccessToken();
